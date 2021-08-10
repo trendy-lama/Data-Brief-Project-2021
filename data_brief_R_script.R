@@ -5,7 +5,7 @@ library(readxl)
 library(ggplot2)
 
 #set the cars dataset as a variable
-cars <- read_excel("cars.xlsx")
+cars <- read_excel("cars.csv")
 
 View(cars)
 
