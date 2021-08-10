@@ -1,5 +1,5 @@
 #set working directory
-setwd("/Users/trentlopata/Documents/Coding/Data Brief Spring 2021")
+setwd("/file_path/")
 #load package
 library(readxl)
 library(ggplot2)
