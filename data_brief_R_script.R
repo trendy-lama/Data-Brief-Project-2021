@@ -75,18 +75,7 @@ anova(new_model)
 #the errors are much lower than the original model and a simple multi-variable model
 #without the log log transformation
 
-#maybe transforming hp into 1/hp would better describe the relationship between mpg~hp
 
-cars$invhp <- 1/(cars$hp)
-
-inv_model <- lm(mpg~invhp+wt, data = cars)
-
-summary(inv_model)
-
-regression_invhp <-ggplot(cars, aes(x = invhp, y = mpg)) + geom_point() +
-  stat_smooth(method = lm) 
-
-regression_invhp  
 
 
 
