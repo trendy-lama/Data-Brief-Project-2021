@@ -51,7 +51,7 @@ the car; this is backed up by experimenting with log transformations to adjust f
 hp which was evident when viewing a scatterplot of hp as the IV and mpg as the DV. The p-
 values for the coefficients on the second model are significant and the R-squared is significantly 
 higher. The residual standard error is also much smaller than the original simple model, meaning 
-it fits the data much better than the suggested model. I would trust the second modelÕs prediction 
+it fits the data much better than the suggested model. I would trust the second model's prediction 
 because it more comprehensively explains the factors behind fuel efficiency and it is a better 
 model objectively - based on SER, R-squared, and P-values. 
       
