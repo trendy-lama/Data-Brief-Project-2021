@@ -9,6 +9,20 @@ cars <- read_excel("cars.csv")
 
 View(cars)
 
+
+#setting the model suggested as an environment object
+suggested_model <- lm(mpg~hp, data = cars)
+
+summary(suggested_model)
+
+confint(suggested_model)
+
+anova(suggested_model)
+
+
+#this model ok, but adding some additional variables may make the model better
+#lets quickly look at the relationship between the two variables that increase the R-sqaured the most: weight and horsepower
+
 regression_viz_hp <- ggplot(cars, aes(x = hp, y = mpg)) + geom_point() +
   stat_smooth(method = lm) + 
   labs(title = 'Suggested Model Scatterplot', subtitle = 'mpg~hp', x = 'Horsepower', y = 'Miles per Gallon')
@@ -21,20 +35,18 @@ regression_viz_wt<-ggplot(cars, aes(x = wt, y = mpg)) + geom_point() +
 
 regression_viz_wt
 
-#weight looks like a more linear relationship
+#weight looks like a tigher relationship
 
+multi_regression <- lm(mpg~hp+wt, data = cars)
 
-#setting the model suggested as an environment object
-suggested_model <- lm(mpg~hp, data = cars)
+summary(multi_regression)
 
-summary(suggested_model)
+confint(multi_regression)
 
-confint(suggested_model)
+anova(multi_regression)
 
-anova(suggested_model)
-
-
-#this model isn't very good
+#weight makes the model much better but lets try a log log transformation to see if tightening the data will lower the errors
+#a log log transformation may also make the conclusions a bit easier to describe because the relationship is described as percent change rather than unit change
 
 #create log variables for mpg, hp, and wt.
 cars$logmpg <- log(cars$mpg)
@@ -60,7 +72,7 @@ regression_loghp <- ggplot(cars, aes(x = loghp, y = logmpg)) + geom_point() +
 
 regression_loghp
 
-#the log log transformation ostensibly is tighter
+#the log log transformation is tighter ostensibly
 
 #create a new log log model with DV = mpg and IV = hp + wt
 #lets see if the error term goes down
@@ -72,7 +84,7 @@ confint(new_model)
 
 anova(new_model)
 
-#the errors are much lower than the original model and a simple multi-variable model
+#the errors are much lower than the original model and a multi-variable model
 #without the log log transformation
 
 
