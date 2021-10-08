@@ -26,6 +26,7 @@ Number of gears = gear
 Number of carburetors = carb
 Horsepower = hp
 Quarter mile time (seconds) = qsec
+
 Means for IV and DV:
 Mean_mpg = 20.090625
 Mean_hp = 146.6875
