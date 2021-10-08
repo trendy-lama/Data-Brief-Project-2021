@@ -8,8 +8,8 @@ determining what factors in a car contribute to fuel efficiency because car emis
 consumption can be reduced by making cars more efficient. This analysis is important because it 
 will guide policy towards making more efficient vehicles to reduce carbon emissions.
       
-      This dataset is from a 1974 edition of ÒMotor Trends magazine. In the dataset, there are 
-thirty-two different types of cars observed and ten factors that measure performance. For this 
+      This dataset is from a 1974 edition of Motor Trends magazine. In the dataset, there are 
+thirty-two different types of cars and ten factors that measure performance. For this 
 model, we are interested in what factors will best predict fuel efficiency (miles per gallon) out of 
 the ten in the dataset. The factors are listed below as well as the means of the dependent and 
 independent variables of the suggested linear model.
