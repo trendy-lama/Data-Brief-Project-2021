@@ -42,28 +42,23 @@ efficiency, since sports cars and trucks typically have low fuel efficiency and 
 adding only weight to the previous model resulted in the most significant increase in explaining 
 the variance in the model. Many of the variables would have caused multicollinearity (like 
 quarter mile time) or are irrelevant (like the number of gears). I decided to do a log log 
-transformation to tighten the data. The adjusted r-squared value rose to 0.8748. The slope 
+transformation to make interpretation easier in % change. The adjusted r-squared value rose to 
+0.8748, but is not relevant since the dependent variables differ across models. The slope 
 coefficients, loghp and logwt became very statistically significant. The residual standard error 
-dropped dramatically from 3.863 in the suggested model to 0.1054 in the new model.
+dropped dramatically from 3.863 in the suggested model to 0.1054 in the new model, again this is 
+not relevant for comparing models.
       
       I think that the second model is better for describing the fuel efficiency of a given car. 
 Intuitively, it seems like horsepower and weight are the biggest factors in the fuel efficiency of 
-the car; this is backed up by experimenting with log transformations to adjust for nonlinearity in 
-hp which was evident when viewing a scatterplot of hp as the IV and mpg as the DV. The p-
-values for the coefficients on the second model are significant and the R-squared is significantly 
+the car; this is backed up by experimenting with log transformations to compress and aid with interpretation.
+The p-values for the coefficients on the second model are significant and the R-squared is significantly 
 higher. The residual standard error is also much smaller than the original simple model, meaning 
 it fits the data much better than the suggested model. I would trust the second model's prediction 
 because it more comprehensively explains the factors behind fuel efficiency and it is a better 
-model objectively - based on SER, R-squared, and P-values. 
+model objectively - based on SER, R-squared, and P-values (before experimenting with logs). 
       
       To summarize, a model was created to predict the factors that contribute to fuel 
 efficiency. Though the first model was good, adding wt and a log log transformation 
-significantly increased the quality of the model. For the EPA, it is suggested that they introduce 
+significantly increased the predictive quality of the model. For the EPA, it is suggested that they introduce 
 regulation to incentivize the production of lighter less powerful cars to increase fuel-efficiency. 
-      
-      
-      
-      
-      
-
       
